@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NPYCorp</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(180deg, #fff7ed 0%, #ffffff 60%);
+        color: #0f172a;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    header h2 {
+      font-weight: 700;
+    }
+
+    header a {
+      color: #64748b;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    header a:hover {
+      color: #ef4444;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #64748b;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 60px 20px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .app-img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-box {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      line-height: 1.8;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .contact-box a {
+      color: #ef4444;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #64748b;
+    }
+
+    footer a {
+      color: #ef4444;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h2>NPYCorp</h2>
+      <div>
+        <a href="/privacy-policy">Privacy</a>
+        <a href="/terms-of-service">Terms</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>NPY Trading and Investment Company Limited</h1>
+      <p>
+        We develop digital platforms focused on restaurant discovery, booking,
+        and lifestyle experiences for modern users.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>About Us</h2>
+      <p style="color:#64748b; max-width:700px;">
+        NPYCorp is a technology company specializing in mobile applications
+        and digital platforms. We focus on building intuitive solutions that
+        connect users with dining, entertainment, and local experiences.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Mobile App Development</h3>
+          <p>We build user-friendly mobile applications for booking and lifestyle services.</p>
+        </div>
+
+        <div class="card">
+          <h3>Platform Development</h3>
+          <p>Scalable systems for restaurant management and reservation platforms.</p>
+        </div>
+
+        <div class="card">
+          <h3>Digital Solutions</h3>
+          <p>Technology solutions that improve customer experience and business efficiency.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Our Product</h2>
+      <div class="card">
+        <h3>ZZIM - Restaurant Booking Platform</h3>
+        <p>
+          ZZIM is a mobile application that helps users discover restaurants,
+          search using Korean language or images, and make reservations easily.
+          The platform is designed to connect users with local dining experiences
+          in a fast and convenient way.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Our Application</h2>
+      <p style="color:#64748b; max-width:700px;">
+        Below are preview screens of the ZZIM application, showcasing key features
+        such as restaurant search, recommendations, and booking flow.
+      </p>
+      <br>
+
+      <div class="grid">
+        <img src="./images/zzim1.png" class="app-img" onclick="openModal(this.src)">
+        <img src="./images/zzim2.png" class="app-img" onclick="openModal(this.src)">
+        <img src="./images/zzim3.png" class="app-img" onclick="openModal(this.src)">
+      </div>
+
+      <p style="margin-top:15px; color:#64748b;">
+        ZZIM is currently under development and will be available on iOS.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p><strong>Email:</strong> npyvina@npycorp.com</p>
+        <p><strong>Website:</strong> <a href="https://npycorp.com">npycorp.com</a></p>
+        <p><strong>Address:</strong><br>
+          No. 68 Nguyen Co Thach Street,<br>
+          MD Complex Building (VP Building), Floor 6,<br>
+          Tu Liem Ward, Ha Noi, Vietnam
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <a href="/privacy-policy">Privacy Policy</a> |
+      <a href="/terms-of-service">Terms of Service</a><br><br>
+      © 2026 NPY Trading and Investment Company Limited
+    </footer>
+
+  </div>
+
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img id="modalImg">
+  </div>
+  <script>
+  function openModal(src) {
+    const modal = document.getElementById("imageModal");
+    const img = document.getElementById("modalImg");
+    img.src = src;
+    modal.style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+</body>
+</html>
