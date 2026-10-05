@@ -1,6 +1,38 @@
 {
-  "routes": [
-    { "src": "/privacy-policy", "dest": "/privacy-policy.html" },
-    { "src": "/terms-of-service", "dest": "/terms-of-service.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/en/terms-of-service",
+      "destination": "/en/terms-of-service/index.html"
+    },
+    {
+      "source": "/en/privacy-policy",
+      "destination": "/en/privacy-policy/index.html"
+    },
+    {
+      "source": "/ko/terms-of-service",
+      "destination": "/ko/terms-of-service/index.html"
+    },
+    {
+      "source": "/ko/privacy-policy",
+      "destination": "/ko/privacy-policy/index.html"
+    },
+    {
+      "source": "/vi/terms-of-service",
+      "destination": "/vi/terms-of-service/index.html"
+    },
+    {
+      "source": "/vi/privacy-policy",
+      "destination": "/vi/privacy-policy/index.html"
+    },
+    {
+      "source": "/terms-of-service",
+      "destination": "/en/terms-of-service/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/en/privacy-policy/index.html"
+    }
   ]
 }
